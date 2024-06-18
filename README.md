@@ -1,1 +1,1 @@
-# sdds_app
+# sdds
