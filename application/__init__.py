@@ -13,10 +13,10 @@ import joblib
 import pickle
 
 # scaler loaded
-scaler = joblib.load('./scaler.gz')
+scaler = joblib.load('./model/scaler.gz')
 
 # load the model from disk
-filename = './model.sav'
+filename = './model/model.sav'
 rf = pickle.load(open(filename, 'rb'))
 
 # flask instance
