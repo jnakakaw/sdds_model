@@ -1,8 +1,6 @@
 from flask import Flask, request, Response, json
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt 
-import seaborn as sns
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, ConfusionMatrixDisplay
