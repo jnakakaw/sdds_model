@@ -10,7 +10,7 @@ from sklearn.neighbors import RadiusNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 import joblib
-import pickle5 as pickle
+import pickle
 
 # scaler loaded
 scaler = joblib.load('scaler.gz')
