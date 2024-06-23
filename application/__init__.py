@@ -9,6 +9,7 @@ from sklearn import tree
 from sklearn.neighbors import RadiusNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
 import joblib
 import pickle
 
