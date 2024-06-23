@@ -17,7 +17,7 @@ scaler = joblib.load('./model/scaler.gz')
 
 # load the model from disk
 filename = './model/model.sav'
-rf = pickle.load(open(filename, 'rb'))
+model = pickle.load(open(filename, 'rb'))
 
 # flask instance
 app = Flask(__name__)
@@ -58,7 +58,11 @@ def predict():
                 Prior_Conviction_Episodes_Prop, Prison_Offense_Violent_Sex, Prison_Years, Condition_MH_SA]])
     
     # Model Prediction 
-    prediction = rf.predict(input_vec)
-    print(prediction[0])
+    prediction = model.predict(input_vec)
 
-    return Response(json.dumps(str(prediction[0])))
+    if prediction[0] == 0:
+        response = "The individual is expected to recidivate"
+    else:
+        response = "The individual is NOT expected to recidivate"
+
+    return Response(json.dumps(response))
